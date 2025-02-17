@@ -6,9 +6,10 @@ export default StyleSheet.create({
     backgroundColor: 'white',
   },
   scrollContainer: {
-    padding: 16,
+    padding:15,
   },
   header: {
+    marginTop:25,
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 10,
@@ -17,21 +18,30 @@ export default StyleSheet.create({
   },
   title: {
     color: 'white',
-    fontSize: 18,
-    marginLeft: 10,
+    fontSize: 20,
+    marginLeft: 50,
+    marginTop:5,
+    marginBottom:10,
   },
-  searchBar: {
+  title2: {
+    color: 'black',
+    fontSize: 18,
+  },
+  buscador: {
+    padding:10,
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 10,
   },
-  categoryDropdown: {
-    backgroundColor: '#f0f0f0',
+  despliegue: {
+    backgroundColor: '#d5d8d8',
     padding: 10,
     borderRadius: 5,
     marginRight: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  searchInput: {
+  buscadorInput: {
     flex: 1,
     borderWidth: 1,
     borderColor: '#ccc',
@@ -39,23 +49,40 @@ export default StyleSheet.create({
     borderRadius: 5,
     backgroundColor: 'white',
   },
-  searchButton: {
+  buscadorButton: {
     backgroundColor: 'blue',
     padding: 10,
     borderRadius: 5,
     marginLeft: 5,
   },
-  searchButtonText: {
+  buscadorButtonText: {
     color: 'white',
     fontWeight: 'bold',
+  },
+  optionsContainer: {
+    position: 'absolute',
+    top: 50, 
+    left: 10,
+    right: 10,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 5,
+    padding: 10,
+    zIndex: 1,
+  },
+  optionItem: {
+    paddingVertical: 10,
+  },
+  optionText: {
+    fontSize: 16,
+    color: 'blue',
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 10,
   },
-  projectCard: {
-    backgroundColor: '#f9f9f9',
+  proyecto: {
+    backgroundColor: '#d5d8d8',
     padding: 10,
     borderRadius: 10,
     shadowColor: '#000',
@@ -64,36 +91,36 @@ export default StyleSheet.create({
     shadowRadius: 5,
     marginVertical: 10,
   },
-  projectImage: {
+  imagen: {
     width: '100%',
     height: 150,
     borderRadius: 5,
   },
-  projectCareer: {
+  carrera: {
     fontSize: 12,
     color: 'gray',
     marginTop: 5,
   },
-  projectTitle: {
+  titulo: {
     fontSize: 16,
     fontWeight: 'bold',
   },
-  projectGroup: {
+  grupo: {
     color: 'purple',
     fontSize: 14,
   },
-  cardFooter: {
+  footer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 10,
   },
-  projectButton: {
+  Button: {
     backgroundColor: 'purple',
     padding: 10,
     borderRadius: 5,
   },
-  projectButtonText: {
+  buttonText: {
     color: 'white',
     fontWeight: 'bold',
   },
