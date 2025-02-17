@@ -37,7 +37,7 @@ export default function Principal() {
             <Text style={styles.buttonText2}>REGISTRARSE</Text>
           </TouchableOpacity>
 
-               <TouchableOpacity onPress={() => navigation.navigate('Inicio')} style={styles.button2}>
+          <TouchableOpacity onPress={() => navigation.navigate('Inicio')} style={styles.button2}>
             <Text style={styles.buttonText2}>INICIO</Text>
           </TouchableOpacity>
 
