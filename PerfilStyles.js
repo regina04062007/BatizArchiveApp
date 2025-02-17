@@ -6,6 +6,7 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
+    marginTop: 30,
     backgroundColor: "white",
   },
 
@@ -15,16 +16,35 @@ export default StyleSheet.create({
     left: 10,
   },
 
+  botonCerrarSesion: {
+    position: "absolute",
+    top: 25,
+    right: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#0404B4",
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+    borderRadius: 15,
+  },
+
+  textoCerrarSesion: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+    marginLeft: 5, 
+  },
+
   contenedorImagen: {
     backgroundColor: "#f2f2f2",
     padding: 20,
     borderRadius: 10,
-    marginTop: 50,
+    marginTop: 60, 
   },
 
   imagenPerfil: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
     borderRadius: 50,
   },
 
@@ -34,13 +54,13 @@ export default StyleSheet.create({
   },
 
   textoInfo: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
     marginBottom: 5,
   },
 
   tituloFavoritos: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: "bold",
     marginTop: 20,
     color: "#6babae",
@@ -51,17 +71,12 @@ export default StyleSheet.create({
     marginBottom: 5,
   },
 
-  botonCerrarSesion: {
-    marginTop: 30,
-    backgroundColor: "#ff5c5c",
+  verProyecto: {
+    marginTop: 10,
+    backgroundColor: "#E6E6E6",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,
   },
-
-  textoCerrarSesion: {
-    color: "white",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
 });
+
