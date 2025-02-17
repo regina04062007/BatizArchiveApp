@@ -7,40 +7,35 @@ import { Image } from 'react-native';
 
 export default function Perfil() {
   const navigation = useNavigation(); 
-
-  return (
+ return (
     <ScrollView contentContainerStyle={styles.contenedor}>
-      {/* Botón de retroceso */}
-      <TouchableOpacity
-        style={styles.botonAtras}
-        onPress={() => navigation.goBack()}
-      >
+      
+      <TouchableOpacity style={styles.botonAtras} onPress={() => navigation.goBack()}>
         <Icon name="arrow-left" size={30} color="black" />
       </TouchableOpacity>
 
-      {/* Imagen de perfil */}
+      <TouchableOpacity style={styles.botonCerrarSesion} onPress={() => navigation.navigate('Principal')}>
+        <Icon name="logout" size={24} color="white" />
+        <Text style={styles.textoCerrarSesion}>Cerrar sesión</Text>
+      </TouchableOpacity>
+
       <View style={styles.contenedorImagen}>
-        <Image
-          source={require('./assets/logoBatiz.jpeg')} // Asegúrate de tener la imagen en esta ruta
-          style={styles.imagenPerfil}
-        />
+        <Image source={require('./assets/perfil.png')} style={styles.imagenPerfil} />
       </View>
 
-      {/* Información del usuario */}
       <View style={styles.infoUsuario}>
         <Text style={styles.textoInfo}>Nombre:</Text>
         <Text style={styles.textoInfo}>Correo electrónico:</Text>
       </View>
 
-      {/* Proyectos favoritos */}
       <Text style={styles.tituloFavoritos}>Proyectos favoritos</Text>
-      <Text style={styles.textoFavorito}>Proyecto 1</Text>
-      <Text style={styles.textoFavorito}>Proyecto 2</Text>
-
-      {/* Botón de cerrar sesión */}
-      <TouchableOpacity style={styles.botonCerrarSesion}>
-        <Text style={styles.textoCerrarSesion}>Cerrar sesión</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('verProyecto')} style={styles.verProyecto}>
+        <Text style={styles.textoFavorito}>Proyecto 1</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('verProyecto')} style={styles.verProyecto}>
+        <Text style={styles.textoFavorito}>Proyecto 2</Text>
+      </TouchableOpacity>
+
     </ScrollView>
   );
 }
