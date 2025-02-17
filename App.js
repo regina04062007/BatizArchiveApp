@@ -9,6 +9,7 @@ import RecuperarContra from './RecuperarContra';
 import CambiarContra from './CambiarContra';
 import Inicio from './Inicio';
 import Perfil from './Perfil';
+import verProyecto from './verProyecto';
 
 
 const Stack = createNativeStackNavigator(); 
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name="CambiarContra" component={CambiarContra} options={{ headerShown: false }} />
         <Stack.Screen name="Inicio" component={Inicio} options={{ headerShown: false }} />
         <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: false }} />
+        <Stack.Screen name="verProyecto" component={verProyecto} options={{ headerShown: false }} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
