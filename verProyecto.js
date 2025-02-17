@@ -1,5 +1,5 @@
 import React from 'react';  
-import { Text, TouchableOpacity, View, KeyboardAvoidingView, ScrollView, Platform, TextInput } from 'react-native';
+import { Text, TouchableOpacity, View, KeyboardAvoidingView, ScrollView, Platform, TextInput, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; 
 import styles from './verProyectoStyles'; 
 import { useNavigation } from '@react-navigation/native';  
@@ -19,8 +19,8 @@ export default function verProyecto() {
         </TouchableOpacity>
 
         <Text style={styles.title}>Titulo del proyecto</Text>
-        
-        <View style={styles.imagenProyecto} />
+        <Image style={styles.imagenProyecto} source={require('./assets/rob.jpeg')} />
+        {/*<Image style={styles.imagenProyecto} source={{ uri: 'https://via.placeholder.com/150' }} />*/}
 
         <View style={styles.infoContainer}>
           <TextInput style={styles.infoTexto} value="Especialidad: " editable={false} />
@@ -42,4 +42,5 @@ export default function verProyecto() {
     </KeyboardAvoidingView>
   );
 }
+
 
