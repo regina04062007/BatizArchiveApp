@@ -10,9 +10,16 @@ export default function Register() {
     return (
       <KeyboardAvoidingView
         style={styles.container}
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'} // Evita que el teclado cubra los campos
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
       >
         <ScrollView contentContainerStyle={styles.scrollContainer}>
+           <TouchableOpacity
+                  style={styles.botonAtras}
+                  onPress={() => navigation.goBack()}
+                >
+                  <Icon name="arrow-left" size={30} color="black" />
+                </TouchableOpacity>
+                
           <View style={styles.header}>
             <Text style={styles.headerText}>REGISTRO</Text>
           </View>
