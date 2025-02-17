@@ -5,6 +5,12 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  botonAtras: {
+    marginTop:20,
+    position: "absolute",
+    top: 20,
+    left: 10,
+  },
   scrollContainer: {
     flexGrow: 1,
     justifyContent: 'center',
@@ -35,13 +41,13 @@ export default StyleSheet.create({
     height: 50,
     borderColor: '#0EA18E',
     borderWidth: 1,
-    paddingHorizontal: 45,  // Espacio para el ícono
+    paddingHorizontal: 45,  
     backgroundColor: '#EEEEEE',
     borderRadius: 8,
   },
   icon: {
     position: 'absolute',
-    left: 15,  // Posiciona el ícono dentro del input
+    left: 15,  
     top: 10,
   },
   button: {
