@@ -1,5 +1,5 @@
 import React from 'react';  
-import { Text, TextInput, TouchableOpacity, View, KeyboardAvoidingView, ScrollView, Platform } from 'react-native';
+import {Text,TextInput,TouchableOpacity, View,KeyboardAvoidingView,ScrollView,Platform} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; 
 import styles from './CambiarContraStyles';
 import { useNavigation } from '@react-navigation/native'; 
@@ -10,56 +10,35 @@ export default function CambiarContra() {
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'} // Evita que el teclado cubra los campos
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
     >
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-         <TouchableOpacity
-                style={styles.botonAtras}
-                onPress={() => navigation.goBack()}
-              >
-                <Icon name="arrow-left" size={30} color="black" />
-              </TouchableOpacity>
+       <ScrollView contentContainerStyle={{ flexGrow: 1 }}keyboardShouldPersistTaps="handled">
         <View style={styles.header}>
           <Text style={styles.headerText}>CAMBIAR CONTRASEÑA</Text>
         </View>
 
-        <View style={styles.linkContainer}>
-          <Text style={styles.link}>Ingrese una nueva contraseña</Text>
-         
+        <View style={styles.footer}>
+          <View style={styles.inputContainer}>
+            <TextInput placeholder="Contraseña" placeholderTextColor="#7E21A3" secureTextEntry={true} style={styles.input}/>
+           <Icon name="lock-outline" size={24} color="#7E21A3" style={styles.icon} />
+          </View>
+
+          <View style={styles.inputContainer}>
+            <TextInput placeholder="Confirmar contraseña" placeholderTextColor="#7E21A3" secureTextEntry={true} style={styles.input}/>
+           <Icon name="lock-outline" size={24} color="#7E21A3" style={styles.icon} />
+          </View>
+
+          <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.button}>
+            <Text style={styles.buttonText}>RESTABLECER</Text>
+          </TouchableOpacity>
+
+          <View style={styles.linkContainer}>
+            <Text style={styles.link}>¿Recordaste tu contraseña?</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+              <Text style={styles.linkHighlight}>Iniciar sesión</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-
-        <View style={styles.inputContainer}>
-          <TextInput
-            placeholder="Contraseña"
-            secureTextEntry={true}  
-            style={styles.input}
-          />
-          <Icon
-            name="eye"
-            size={28}
-            color="#0EA18E"
-            style={styles.icon}
-          />
-        </View>
-
-        <View style={styles.inputContainer}>
-          <TextInput
-            placeholder="Confirmar contraseña"
-            secureTextEntry={true}  
-            style={styles.input}
-          />
-          <Icon
-            name="eye"
-            size={28}
-            color="#0EA18E"
-            style={styles.icon}
-          />
-        </View>
-
-
-        <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.button}>
-          <Text style={styles.buttonText}>RESTABLECER</Text>
-        </TouchableOpacity>
       </ScrollView>
     </KeyboardAvoidingView>
   );
